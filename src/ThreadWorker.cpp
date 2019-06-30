@@ -27,7 +27,7 @@ void ThreadWorker::run()
 
 void ThreadWorker::mainLoop()
 {
-  while (!*m_stop)
+  while (!*m_stopPtr)
   {
     std::unique_ptr<IThreadTask> taskPtr{nullptr};
     if(m_taskQueuePtr->pop(taskPtr))
